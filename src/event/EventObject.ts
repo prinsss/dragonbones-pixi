@@ -9,10 +9,10 @@
  * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
  * the Software, and to permit persons to whom the Software is furnished to do so,
  * subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all
  * copies or substantial portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
@@ -49,7 +49,7 @@ export class EventObject extends BaseObject {
      * @version DragonBones 4.5
      * @language zh_CN
      */
-    public static readonly START: string = "start";
+    public static readonly START = "start";
     /**
      * - Animation loop play complete once.
      * @version DragonBones 4.5
@@ -60,7 +60,7 @@ export class EventObject extends BaseObject {
      * @version DragonBones 4.5
      * @language zh_CN
      */
-    public static readonly LOOP_COMPLETE: string = "loopComplete";
+    public static readonly LOOP_COMPLETE = "loopComplete";
     /**
      * - Animation play complete.
      * @version DragonBones 4.5
@@ -71,7 +71,7 @@ export class EventObject extends BaseObject {
      * @version DragonBones 4.5
      * @language zh_CN
      */
-    public static readonly COMPLETE: string = "complete";
+    public static readonly COMPLETE = "complete";
     /**
      * - Animation fade in start.
      * @version DragonBones 4.5
@@ -82,7 +82,7 @@ export class EventObject extends BaseObject {
      * @version DragonBones 4.5
      * @language zh_CN
      */
-    public static readonly FADE_IN: string = "fadeIn";
+    public static readonly FADE_IN = "fadeIn";
     /**
      * - Animation fade in complete.
      * @version DragonBones 4.5
@@ -93,7 +93,7 @@ export class EventObject extends BaseObject {
      * @version DragonBones 4.5
      * @language zh_CN
      */
-    public static readonly FADE_IN_COMPLETE: string = "fadeInComplete";
+    public static readonly FADE_IN_COMPLETE = "fadeInComplete";
     /**
      * - Animation fade out start.
      * @version DragonBones 4.5
@@ -104,7 +104,7 @@ export class EventObject extends BaseObject {
      * @version DragonBones 4.5
      * @language zh_CN
      */
-    public static readonly FADE_OUT: string = "fadeOut";
+    public static readonly FADE_OUT = "fadeOut";
     /**
      * - Animation fade out complete.
      * @version DragonBones 4.5
@@ -115,7 +115,7 @@ export class EventObject extends BaseObject {
      * @version DragonBones 4.5
      * @language zh_CN
      */
-    public static readonly FADE_OUT_COMPLETE: string = "fadeOutComplete";
+    public static readonly FADE_OUT_COMPLETE = "fadeOutComplete";
     /**
      * - Animation frame event.
      * @version DragonBones 4.5
@@ -126,7 +126,7 @@ export class EventObject extends BaseObject {
      * @version DragonBones 4.5
      * @language zh_CN
      */
-    public static readonly FRAME_EVENT: string = "frameEvent";
+    public static readonly FRAME_EVENT = "frameEvent";
     /**
      * - Animation frame sound event.
      * @version DragonBones 4.5
@@ -137,7 +137,7 @@ export class EventObject extends BaseObject {
      * @version DragonBones 4.5
      * @language zh_CN
      */
-    public static readonly SOUND_EVENT: string = "soundEvent";
+    public static readonly SOUND_EVENT = "soundEvent";
     /**
      * @internal
      * @private
@@ -275,7 +275,7 @@ export class EventObject extends BaseObject {
 
     protected _onClear(): void {
         this.time = 0.0;
-        this.type = "";
+        this.type = "" as EventStringType;
         this.name = "";
         this.armature = null as any;
         this.bone = null;

@@ -29,6 +29,18 @@ import { EventStringType, EventObject } from "../event";
 import { PolygonBoundingBoxData } from "../model";
 import { Animation } from "../animation";
 
+type PixiArmatureDisplayObjectEvents = {
+    [x in EventStringType]: [event: EventObject]
+};
+
+// Workaround for PIXI v7 custom display object events.
+// See: https://github.com/pixijs/pixijs/issues/8957
+declare global {
+    namespace GlobalMixins {
+        interface DisplayObjectEvents extends PixiArmatureDisplayObjectEvents {}
+    }
+}
+
 /**
  * @inheritDoc
  */
